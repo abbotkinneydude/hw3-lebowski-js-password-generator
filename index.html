@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  </head>
+
+<body>
+  <div class="wrapper">
+    <header><h1>Lebowski Password Generator</h1></header>
+    <div class="card">
+      <div class="card-header">
+
+        <div class="container"> <!-- Start Container -->
+          <div class="row"> <!-- Start Row -->
+            <div class="col md-12"><img src="https://filmforum.org/do-not-enter-or-modify-or-erase/client-uploads/_1000w/the-big-lebowski-slide-1.jpg" title="The Big Lebowski" alt="The Big Lebowksi" style="max-width: 100%; border: 2px orange !important; margin-bottom: 20px;" /></div>
+          </div> <!-- End Row -->
+            <!-- Start Row -->
+          <div class="row" style="margin: 0 auto; margin-bottom: 20px;">
+            <!-- 1 LINE: Upper Cases / Lower Cases / Numbers / Symbols / Length Request -->
+            <div class="col md-3"><button onclick="upperRequest()">UpperCases</button></div>
+            <div class="col md-3"><button onclick="lowerRequest()">LowerCases</button></div>
+            <div class="col md-2"><button onclick="numbersRequest()">Numbers</button></div>
+            <div class="col md-2"><button onclick="symbolsRequest()">Symbols</button></div> 
+            <div class="col md-2"><button onclick="lengthRequest()">Length</button></div>
+          </div> <!-- End Row -->
+          <div class="row"> <!-- Start Row -->
+            <div class="col md-12"> <!-- Start md-12: Answers List -->
+              <ul style="list-style-type: square;">
+                <li id="upperAnswer"></li>
+                <li id="lowerAnswer"></li>
+                <li id="numbersAnswer"></li>
+                <li id="symbolsAnswer"></li>
+                <li id="lengthAnswer"></li>     
+              </ul>                       
+            </div> <!-- End md-12-->
+          </div> <!-- End Row -->
+        </div> <!-- End Container -->
+
+        <div class="container">
+          <div class="row" style="margin: 0 auto;">
+              <div class="col md-12">
+              <h2 style="text-align: center;">Generate a Password</h2>
+              </div>
+          </div> <!-- End Row -->
+          <div class="row" style="margin: 0 auto;">
+              <div class="col md-12 card-body">
+              <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+              </div>
+          </div> <!-- End Row -->
+          <div class="row" style="margin: 0 auto;">
+              <div class="col md-12 card-footer">
+              <button id="generate" class="btn" style="text-align: center;">Generate a <strong>Lebowksi</strong> Password<br /><br />© El Duderino</button>
+              </div>
+          </div> <!-- End Row -->
+
+      </div> <!-- End Card Header -->
+    </div> <!-- Card -->
+  </div> <!-- End Wrapper -->
+  <!--    <script src="script.js" defer></script> -->
+</body>
+
+
+<script type = "text/javascript">
+
+  function upperRequest() {
+    var responseUpper;
+    var upper = prompt("Lebowski Password Generator\nLebowski password to include upper cases? (Y/N)");
+    if (upper == "YES", "yes", "Y", "y")
+    { responseUpper = "UpperCases: YES. That rug really tied the room together"; }
+    else (upper == undefined, null, "NO", "no", "N", "n")
+    { responseUpper = "UpperCases: NO. Hey, careful, man, there’s a beverage here!"; }
+    document.getElementById("upperAnswer").innerHTML = responseUpper;
+    }
+
+  function lowerRequest() {
+    var responseLower;
+    var lower = prompt("Lebowski Password Generator\nLebowski password to include lower cases? (Y/N)");
+    if (lower == "YES", "yes", "Y", "y")
+    { responseLower = "LowerCases: YES. Uh, I'm just gonna go find a cash machine"; }
+    else (lower == undefined, "NO", "no", "N", "n")
+    { responseLower = "LowerCases: NO. I am not Mr. Lebowski. You're Mr. Lebowski. I'm the Dude!"; }
+    document.getElementById("lowerAnswer").innerHTML = responseLower;
+    }
+  
+    function numbersRequest() {
+    var responseNumbers;
+    var numbers = prompt("Lebowski Password Generator\nNumbers to be included in the Lebowski password?");
+    if (numbers == "YES", "yes", "Y", "y")
+    { responseNumbers = "Numbers: YES. Bullshit, Walter. Mark it 8, Dude."; }
+    else (numbers == undefined, "NO", "no", "N", "n")
+    { responseNumbers = "Numbers: NO. Uh, excuse me. Mark it zero. Next frame."; }
+    document.getElementById("numbersAnswer").innerHTML = responseNumbers;
+    }
+
+    function symbolsRequest() {
+    var responseSymbols;
+    var symbols = prompt("Lebowski Password Generator\nSymbols to be included in the Lebowski password? (Y/N)");
+    if (symbols == "YES", "yes", "Y", "y")
+    { responseSymbols = "Symbols: YES. The bums will always lose. Do you hear me, Lebowski?"; }
+    else (symbols == undefined, "NO", "no", "N", "n")
+    { responseSymbols = "Symbols: NO. The old man told me to take any rug in the house."; }
+    document.getElementById("symbolsAnswer").innerHTML = responseSymbols;
+    }
+
+    function lengthRequest() {
+    var responseLength;
+    var length = prompt("Lebowski Password Generator\nLength of the Lebowski password? (8-128)");
+    if (parseInt(length) >= "8" || parseInt(length) <= "128")
+    { responseLength = "Length: " + length + ". The god damn plane has crashed into the mountain!"; }
+    else (parseInt(length) <= 7 || parseInt(length) >= 129)
+    { responseLength = "Length: " + length + ". You're being very undude."; }
+    document.getElementById("lengthAnswer").innerHTML = responseLength;
+    }
+
+/* // Assignment Code
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+var password = generatePassword();
+var passwordText = document.querySelector("#password");
+
+passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword); */
+
+
+
+
+</script>
+</html>
