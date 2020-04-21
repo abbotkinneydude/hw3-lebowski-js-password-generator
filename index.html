@@ -62,76 +62,57 @@
       </div> <!-- End Card Header -->
     </div> <!-- Card -->
   </div> <!-- End Wrapper -->
-  <!--    <script src="script.js" defer></script> -->
 </body>
 
-
-<script type = "text/javascript">
-
+<script type="text/javascript">
   function upperRequest() {
     var responseUpper;
     var upper = prompt("Lebowski Password Generator\nLebowski password to include upper cases? (Y/N)");
-    if (upper == "YES", "yes", "Y", "y")
+    if (upper === 'YES' || upper === 'yes' || upper === 'Y' || upper === 'y')
     { responseUpper = "UpperCases: YES. That rug really tied the room together"; }
-    else (upper == undefined, null, "NO", "no", "N", "n")
+    else
     { responseUpper = "UpperCases: NO. Hey, careful, man, there’s a beverage here!"; }
     document.getElementById("upperAnswer").innerHTML = responseUpper;
     }
-
   function lowerRequest() {
     var responseLower;
     var lower = prompt("Lebowski Password Generator\nLebowski password to include lower cases? (Y/N)");
-    if (lower == "YES", "yes", "Y", "y")
+    if (lower === 'YES' || lower === 'yes' || lower === 'Y' || lower === 'y')
     { responseLower = "LowerCases: YES. Uh, I'm just gonna go find a cash machine"; }
-    else (lower == undefined, "NO", "no", "N", "n")
+    else
     { responseLower = "LowerCases: NO. I am not Mr. Lebowski. You're Mr. Lebowski. I'm the Dude!"; }
     document.getElementById("lowerAnswer").innerHTML = responseLower;
     }
-  
-    function numbersRequest() {
+  function numbersRequest() {
     var responseNumbers;
     var numbers = prompt("Lebowski Password Generator\nNumbers to be included in the Lebowski password?");
-    if (numbers == "YES", "yes", "Y", "y")
+    if (numbers === 'YES' || numbers === 'yes' || numbers === 'Y' || numbers === 'y')
     { responseNumbers = "Numbers: YES. Bullshit, Walter. Mark it 8, Dude."; }
-    else (numbers == undefined, "NO", "no", "N", "n")
+    else
     { responseNumbers = "Numbers: NO. Uh, excuse me. Mark it zero. Next frame."; }
     document.getElementById("numbersAnswer").innerHTML = responseNumbers;
     }
-
-    function symbolsRequest() {
+  function symbolsRequest() {
     var responseSymbols;
     var symbols = prompt("Lebowski Password Generator\nSymbols to be included in the Lebowski password? (Y/N)");
-    if (symbols == "YES", "yes", "Y", "y")
+    if (symbols === 'YES' || symbols === 'yes' || symbols === 'Y' || symbols === 'y')
     { responseSymbols = "Symbols: YES. The bums will always lose. Do you hear me, Lebowski?"; }
-    else (symbols == undefined, "NO", "no", "N", "n")
+    else
     { responseSymbols = "Symbols: NO. The old man told me to take any rug in the house."; }
     document.getElementById("symbolsAnswer").innerHTML = responseSymbols;
     }
-
-    function lengthRequest() {
+  function lengthRequest() {
     var responseLength;
     var length = prompt("Lebowski Password Generator\nLength of the Lebowski password? (8-128)");
-    if (parseInt(length) >= "8" || parseInt(length) <= "128")
+    if (length >= 8 && length <= 128)
     { responseLength = "Length: " + length + ". The god damn plane has crashed into the mountain!"; }
-    else (parseInt(length) <= 7 || parseInt(length) >= 129)
+    else
     { responseLength = "Length: " + length + ". You're being very undude."; }
     document.getElementById("lengthAnswer").innerHTML = responseLength;
     }
 
-/* // Assignment Code
-var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-var password = generatePassword();
-var passwordText = document.querySelector("#password");
 
-passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); */
 
 
 
