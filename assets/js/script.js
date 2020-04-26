@@ -7,7 +7,7 @@ var symbols;
 var length;
 
   function stringToBoolean(str) {
-  const yeses = ['yes', 'y', 'yeah', 'yeah lebowski', 'team america', 'south park', 'beavis,' 'oui', 'ja'];
+  const yeses = ['yes', 'y', 'yeah', 'yeah lebowski', 'team america', 'south park', 'beavis', 'oui', 'ja'];
   return yeses.findIndex(y => y === str.toLowerCase()) > -1;
   }
 
