@@ -7,7 +7,7 @@ var symbols;
 var length;
 
   function stringToBoolean(str) {
-  const yeses = ['yes', 'y', 'yeah', 'yeah lebowski', 'oui', 'ja'];
+  const yeses = ['yes', 'y', 'yeah', 'yeah lebowski', 'team america', 'south park', 'beavis,' 'oui', 'ja'];
   return yeses.findIndex(y => y === str.toLowerCase()) > -1;
   }
 
@@ -49,7 +49,7 @@ var length;
     }
   function lengthRequest() {
     var responseLength;
-    length = Number (prompt("Lebowski Password Generator\nLength of the Lebowski password? (8-128)"));
+    length = Number (prompt("Lebowski Password Generator\nLength of the Lebowski password? (Recommended: 8-128)"));
     if (length >= 8 && length <= 128)
     { responseLength = "Length: " + length + ". The god damn plane has crashed into the mountain!"; }
     else
