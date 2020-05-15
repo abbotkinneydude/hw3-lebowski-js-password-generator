@@ -85,9 +85,19 @@ function finalPassword() {
     if (numbers) all += hazardousNumbers();
     if (symbols) all += hazardousSymbols();
     var password = '';
+
+// New If/Else Statement added to limit the number of characters in the password generator to 8-128.
+
+    if (length >= 8 && length <= 128) {
+
     for (var index = 0; index < length; index++) {
         var character = Math.floor(Math.random() * all.length);
         password += all.substring(character, character + 1);
+    }
+
+    }
+    else {
+        alert("Not going to work: the number of characters must be between 8 and 128.");
     }
     return password;
 }
@@ -103,6 +113,3 @@ function finalPassword() {
     }
     // Add event listener to generate button
     generateBtn.addEventListener("click", writePassword);
-
-
-

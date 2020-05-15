@@ -1,6 +1,16 @@
 # hw3-lebowski-js-password-generator
 The Big Lebowski meets his ultimate nemesis: the js password generator!
 
+
+2020-05-15 14h10 Update:
+
+- I added a if/else statement before my password generation loop in the password generator (function finalPassword).
+- That way, the generator will return an alert ('Not Going to Work') if the length of characters requested is below 8 or above 128.
+- With this if/else statement added and limiting the number of characters to 8-128, I believe this homework to satisfy all requested guidelines.
+
+Thank you for your time. 
+
+
 Notes:
 
 HTML Document:
