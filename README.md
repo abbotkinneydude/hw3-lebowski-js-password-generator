@@ -39,6 +39,7 @@
 <h5>JavaScript Inner Works</h5>
 
 <ul>
+
 <li>Based on the 5 buttons, there are 5 variables: 1) upper 2) lower 3) numbers 4) symbols 5) length.</li>
 <li>There is a stringToBoolean function to convert the first four strings into true/false statements with a bonus string to lowercase conversion to avoid the need for uppercase characters.</li>
 <li>In addition of yes, y, yeah, you can also type yeah lebowski, team america, south park, beavis, oui, ja [const array within the StringToBoolean function).</li>
@@ -58,22 +59,26 @@
    <li>For the symbols, it's 15 chars available from hexacode 33.</li>
    </ul>
 </li>
-
 <li>Because the Math.Random function finds a decimal number between (ex:Upper/Lower) 1.xxx and 26.xxx,
   we use a math.floor function to:<br/>
   a) sanitize it to a non floating point number between 1 and 26,<br />
   b) add the necessary integer to place those numbers in the correct hexacodal geography (+65, +97, +48, +33 - see section #1 above).
 </li>
- 
+
 <li>Finally, the String.fromCharCode extracts the necessary strings (characters) from each operation.<br />
+
 <ul>his value is inherited by each hazardous function
   <li>The function finalPassword generates the final password.</li>
   <li>The if in the "var all +=" associates the surviving values (if not all of them) and passes them on to...</li>
   <li>The loop contained in "var password" which uses math.floor and math.random to generate the char selections + the .length circonsizes them based on the previous user input.</li>
   <li>the following substring validates the final selection which is passed via a return password to the write password function below.</li>
 </ul>
+
 </li>
+
 </ol>
+
+</ul>
 
 ## References:
 <ul>
