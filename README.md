@@ -8,7 +8,7 @@
 
 ## Overview / Instructions:
 <ul>
-<li>5 types of password elements selected via buttons available to the user:
+<li>5 types of password elements available to the user via a button / prompt window combination:
 <ol>
 <li>Uppercases</li>
 <li>Lowercases</li>
@@ -22,13 +22,13 @@
 <li>If you respond yes to any of the first 4: you get a positive quote from The Big Lebowski.</li>
 <li>If you respond no to any of the first 4: you get a negative quote from The Big Lebowski.</li>
 </ul>
-<li>The Fifth button, length, gets a positive quote if the value entered is between 8 and 128. If outside of that range, you're being very undude.</li>
+<li>The fifth button, length, gets a positive quote if the value entered is between 8 and 128. If outside of that range, you're being very undude.</li>
 <li>Once your selection is complete, click on the red button to 'degenerate' a password.</li>
 </ul>
 
 ## Technical Notes:
 
-<h6>HTML Document</h6>
+<h5>HTML Document</h5>
 <ul>
 <li>Head Section: 1) CSS Reset, 2) CSS Bootstrap, 3) Trilogy CSS.</li>
 <li>Head Section: The javascript src is specified as DEFER so it doesn't load until the whole page is loaded.</li>
@@ -36,7 +36,7 @@
 <li>Body Section: Notice the multiple rows within the container, how the buttons are placed, etc. There's a minimum (6 instances) of custom css.</li>
 </ul>
 
-<h6>JavaScript Inner Works</h6>
+<h5>JavaScript Inner Works</h5>
 
 <ul>
 <li>Based on the 5 buttons, there are 5 variables: 1) upper 2) lower 3) numbers 4) symbols 5) length.</li>
@@ -44,9 +44,7 @@
 <li>In addition of yes, y, yeah, you can also type yeah lebowski, team america, south park, beavis, oui, ja [const array within the StringToBoolean function).</li>
 <li>Anything else will trigger a false statement.</li>
 <li>Obviously, the fifth variable (length) is a number from the get so not need for any conversion.</li>
-<li>Please note that, while a value comprised between 8 and 128 chars is recommended by the length prompt, you can actually type values outside of that range.</li>
-<li>Again, for length, anything outside of 8-128 will be considered very undude but tolerated. Hey... This is California!</li>
-<li>the if/else statements are quite obvious: true/false sends you the quote (responseUpper, responseLower, etc.) and the true/false statement is stored in each variable.</li>
+<li>The if/else statements are quite obvious: true/false sends you the quote (responseUpper, responseLower, etc.) and the true/false statement is stored in each variable.</li>
 <li>Depending on the amount of true/false statements, the script will triggers four functions.</li>
 <li>Those four functions are: hazardousUpper, hazardousLower, hazardousNumbers, hazardousSymbols.</li>
 <li>Each function is calculated based on (in logical order):
@@ -70,8 +68,8 @@
 <li>Finally, the String.fromCharCode extracts the necessary strings (characters) from each operation.<br />
 <ul>his value is inherited by each hazardous function
   <li>The function finalPassword generates the final password.</li>
-  <li>The if in the <var all> += associates the surviving values (if not all of them) and passes them on to...</li>
-  <li>The loop contained in <var password> which uses math.floor and math.random to generate the char selections + the .length circonsizes them based on the previous user input.</li>
+  <li>The if in the "var all +=" associates the surviving values (if not all of them) and passes them on to...</li>
+  <li>The loop contained in "var password" which uses math.floor and math.random to generate the char selections + the .length circonsizes them based on the previous user input.</li>
   <li>the following substring validates the final selection which is passed via a return password to the write password function below.</li>
 </ul>
 </li>
@@ -94,48 +92,3 @@
 &nbsp;|&nbsp;
 <a href="mailto:soundtrackspecialist@gmail.com" title="Courriel">Send me a 'courriel'</a>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Details:
-<i>Weather Conditions for main window are:</i><br />
-<ol>
-<li>City Name</li>
-<li>Date</li>
-<li>Icon Representation of Weather Conditions</li>
-<li>Temperature (Celsius / Fahrenheit)</li>
-<li>Humidity</li>
-<li>Wind speed</li>
-<li>UV index (color based condition dependent)</li>
-</ol>
-
-<i>Weather Conditions for 5 days forecast are:</i><br />
-<ol>
-<li>Date</li>
-<li>Icon Representation of Weather Conditions</li>
-<li>Temperature (Celsius / Fahrenheit)</li>
-<li>Humidity</li>
-</ol>
-
-
-## Instructions:
-<ul>
-<li>Enter valid city name in the search box to search for the weather for said city.</li>
-<li>Displayed on screen will be be the current weather and weather forecast for the next 5 days for said city.</li>
-<li>On the left side of the weather condition are displayed yellow active buttons which contain the search history.</li>
-<li>Click on any of those yellow buttons to retrieve the weather condition for the city name associated to that button.</li>
-<li>At page refresh, the current weather conditions will display the last city searched prior to refresh.</li>
-<li>If you want the search history to show after a page refresh, please uncomment function searchHistory().</li>
-</ul>
-
-<p><i>Refer to weather.js (javascript file) for code dissection.<i></p>
