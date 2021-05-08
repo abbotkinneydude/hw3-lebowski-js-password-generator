@@ -1,10 +1,10 @@
-## #hw3-lebowski-js-password-generator
+## #3-lebowski-js-password-generator
 
 <h3>Big Lebowski flaired JS password generator optimized for mobile devices (Bootstrap CSS).</h3>
 <p>Github Repository Page: https://github.com/palowenstein/lebowski-js-password-generator</p>
 <p>Github Deployment Page: https://palowenstein.github.io/lebowski-js-password-generator/</p>
 
-![Big Lebowski Password Generator (Screenshot)](./assets/img/ucla-hw3-lebowski-password-generator.jpg?raw=true "Big Lebowski Password Generator (Screenshot)")
+![Big Lebowski Password Generator (Screenshot)](./assets/img/3-lebowski-password-generator.jpg?raw=true "Big Lebowski Password Generator (Screenshot)")
 
 ## Overview / Instructions:
 <ul>
